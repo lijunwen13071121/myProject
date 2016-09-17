@@ -1,0 +1,87 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/my1.css')
+        style(type='text/css').
+            *{margin:0px;padding: 0px;}
+            @media (max-width:768px ) {
+                .right{font-size: 15px}
+            }
+            @media (min-width:768px ) {
+                .right{font-size: 20px}
+            }
+            @media (min-width:998px ) {
+                .right{font-size: 25px}
+            }
+            @media (min-width:1200px ) {
+                .right{font-size: 30px}
+            }
+            #left2,#left3{display: none}
+    body
+        div(style='width:80%;margin:auto;')
+        .row
+            .col-xs-1.col-lg-1.col-md-1.col-sm-1
+            .col-xs-9.col-lg-9.col-md-9.col-sm-9(style='font-size:40px;font-weight: bolder;') 个人信息：
+        br
+        .row
+            .col-xs-1.col-lg-1.col-md-1.col-sm-1
+            .col-xs-2.col-lg-2.col-md-2.col-sm-2(style='font-weight: bolder;')
+                #right1.right(style='margin-bottom:5px;') 基本信息
+                #right2.right(style='margin-bottom:5px;') 教学信息
+                #right3.right 资历
+            // 基本信息
+            .col-xs-8.col-lg-8.col-md-8.col-sm-8(style='font-size:16px')
+                #left1.left(style='width:100%;height: 200px;')
+                    #msg.msg 基本信息：
+                    #msg1.msg
+                        #msg11.msg
+                            .row.msgRow
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 姓名：
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-4.msgR1 小李子
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 性别：
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-4.msgR1 男
+                            .row.msgRow
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 昵称：
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-4.msgR1 文子
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 生日：
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-4.msgR1 1994.2.15
+                            .row.msgRow
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 所上大学：
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-4.msgR1 南昌航空大学
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 地址：
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-4.msgR1 江西省南昌市红谷滩
+                            .row.msgRow
+                                .col-sm-2.col-lg-2.col-md-2.col-xs-2.msgL1 自我介绍：
+                                .col-sm-10.col-lg-10.col-md-10.col-xs-10.msgR1 我是一个很帅气的老师，然后。。。。。。此后省略n字
+                        #msg12.msg
+                            img.img-responsive.img-circle(src='/images/head1.jpg')
+                // 教学信息
+                #left2.left(style='width:100%;height: 200px;background-color: pink;')
+                // 资历
+                #left3.left(style='width:100%;height: 200px;background-color: beige;')
+        script(src='../bin/public/javascripts/jquery-3.1.0%20(2).js')
+        script(src='../bin/public/javascripts/jquery-3.1.0%20(2).js')
+        script(type='text/javascript').
+            $(function(){
+                $('#right1').click(function(){
+                    $('.left').css("display","none");
+                    $('#left1').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right1').css({color:"orange",backgroundColor:"white"})
+                });
+                $('#right2').click(function(){
+                    $('.left').css("display","none");
+                    $('#left2').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right2').css({color:"orange",backgroundColor:"white"})
+                });
+                $('#right3').click(function(){
+                    $('.left').css("display","none");
+                    $('#left3').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right3').css({color:"orange",backgroundColor:"white"});
+                })
+            })
