@@ -1,0 +1,83 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        title hometeach-mainpage
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/iframe.css')
+        style.
+    body
+        header#head
+            nav#nav1
+                #nav1-div1
+                    p
+                        a(href='#') 注册 
+                        | |
+                        a(href='#')  登录
+                #nav1-div2
+                    p
+                        a(href='#') 消息
+                        | |
+                        a(href='#') 我的
+        #top
+        section#content
+            section#teacher
+                dl
+                    dt
+                        img(src='images/423.jpg', alt='教师')
+                    dd
+                        h3 王小二
+                        p 现教课程：小学英语
+                        div
+                            button#btn1.btn.btn-lg(type='button') 约课
+                            button#btn2.btn.btn-lg.disabled(type='button') 已约
+                        p 学生评分：4.9分
+                        p
+                            span 一句话简介:
+                            span
+                                | 在一次股市之战中以郭现为首的资本博弈集团，与以学生为首的资本博弈集团协议分食利益...
+            nav
+                ul.nav.nav-tabs(role='tablist')
+                    li#blog.active(role='presentation')
+                        a(href='#') 博客
+                    li#comment(role='presentation')
+                        a(href='#') 评价
+            aside.list-group
+                .list-group-item(href='#')
+                    h4.list-group-item-heading 授课时间
+                    p.list-group-item-text 17:00~20:00
+                .list-group-item(href='#')
+                    h4.list-group-item-heading 所在地址
+                    p.list-group-item-text 江苏省苏州市工业园区
+                .list-group-item(href='#')
+                    h4.list-group-item-heading 目标价位
+                    p.list-group-item-text 100元/时
+                .list-group-item(href='#')
+                    h4.list-group-item-heading 曾授课
+                    p.list-group-item-text 小学数学
+            div
+                iframe#hometeach(src='hometeach-blog.html', scrolling='no', name='hometeach')
+        a(href='#top')
+            button#bottom-top.btn.btn-default(type='button')
+                span.glyphicon.glyphicon-chevron-up  
+        script(src='/javascripts/jquery-3.1.0%20(2).js')
+            script(src='/javascripts/bootstrap.js')
+        script.
+            $('#blog').click(function(e){
+                e.preventDefault();
+                $('#comment').removeClass('active');
+                $(this).addClass('active');
+                window.frames['hometeach'].document.location.href ='hometeach-blog.html';
+            });
+            $('#comment').click(function(e){
+                e.preventDefault();
+                $('#blog').removeClass('active');
+                $(this).addClass('active');
+                window.frames['hometeach'].document.location.href ='hometeach-comment.html';
+            });
+            $('#btn1').click(function(){
+                btn1.style.display="none";
+                btn2.style.display="block";
+            });
+

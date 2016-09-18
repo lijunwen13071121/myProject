@@ -1,0 +1,18 @@
+body{padding-top:80px;}
+#header{position: relative;}
+#header1{
+    position:relative;
+    left:50px;
+}
+#header2{
+    position:absolute;
+    top:0px;
+    right:50px;
+}
+#header10{
+    padding-right:40%;
+    font-size:20px;
+    font-weight: bold;
+    text-align: left;
+}
+.header10>a{color:black}
