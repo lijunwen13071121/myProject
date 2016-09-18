@@ -1,0 +1,130 @@
+*{margin: 0;padding: 0;}
+#nav1{
+    width: 100%;height: 30px;
+    background-color:#333;
+    position: fixed;top:0;
+    z-index: 1;
+}
+#nav1-div1{
+    float: left;
+    width: 80px;height: 30px;
+    margin-left: 50px;
+}
+#nav1-div2{
+    float: right;
+    width: 82px;height: 30px;
+    margin-right: 50px;
+}
+#nav1-div1 p{
+    line-height: 30px;
+    font-weight: bold;
+    color:#666;
+}
+#nav1-div2 p{
+    line-height: 30px;
+    font-weight: bold;
+}
+#nav1-div1 p a{
+    color: #ddd;
+    transition: 0.5s color;
+    -webkit-transition:0.5s color;
+    -moz-transition: 0.5s color;
+    -o-transition: 0.5s color;
+    -ms-transition: 0.5s color;
+    text-decoration: none;}
+#nav1-div2 p a{
+    color: #ddd;
+    transition: 0.5s color;
+    -webkit-transition:0.5s color;
+    -moz-transition: 0.5s color;
+    -o-transition: 0.5s color;
+    -ms-transition: 0.5s color;
+    text-decoration: none;}
+#nav1-div1 p a:hover{color: #f60}
+#nav1-div2 p a:hover{color: #f60}
+#bottom-top{
+    border: 1px solid #f60;
+    position:fixed;right:30px;top: 500px;
+    height: 40px;width: 40px;
+    color:#f60;
+}
+#bottom-top:hover{
+    border:1px solid #f60;
+    background-color: #f60;
+    color:#fff;
+}
+.btn:hover{background-color: #fff;}
+#top{height: 10px;}
+dl{
+    height:160px;width: 90%;
+    margin:auto;
+    overflow: hidden;
+}
+dt{
+    height: 100%;width:20%;
+    overflow: hidden;
+    float: left;
+}
+img{
+    width:60%;
+    margin-top:30px;
+    border-radius: 100px;
+}
+dd{
+    float: left;
+    height:100%;width: 80%;
+}
+.nav li{width: 20%;}
+dd h3+p{float: left;}
+dd div{float:right;}
+#btn2{display: none;}
+#btn1{
+    background-color:#ddd;
+    transition: 0.7s all;
+    -webkit-transition: 0.7s all;
+    -moz-transition: 0.7s all;
+    -o-transition: 0.7s all;
+    -ms-transition: 0.7s all; }
+#btn1:hover{background-color:#9f9;}
+dd div+p{clear:left;}
+dd p{text-shadow:1px 1px 1px #f90;}
+h3{text-shadow:1px 1px 1px #f90;}
+h4{text-shadow: none;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -o-transition: 1s all;
+    -ms-transition: 1s all;
+}
+h4:hover{
+    text-shadow:3px 3px 1px #f90;
+}
+#content{
+    margin: 20px auto;
+    width:1000px;
+    position: relative;
+}
+aside{
+    position:absolute;top:202px;
+    width: 20%;height: 252px;
+    float: left;
+}
+#hometeach{
+    position:absolute;top:202px;right:0;
+    height: 1000px;width: 80%;
+    border:0;
+    float:right;
+}
+@media screen and (min-width:1024px){
+    #hometeach{ width:80%;}
+}
+@media screen and (max-width:1024px){
+    .list-group{display:none;}
+    #content{width: 100%;}
+    #hometeach{ width:100%;}
+}
+
+
+
+
+

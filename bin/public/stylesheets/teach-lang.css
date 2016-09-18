@@ -1,0 +1,79 @@
+*{margin: 0;padding: 0;}
+section{height: 100%;width: 100%;}
+article{
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+dl{
+    height: 100%;width: 90%;
+    margin:auto;
+    overflow: hidden;
+}
+dt{
+    height: 100%;width:30%;
+    overflow: hidden;
+    float: left;
+}
+img{
+    width:80%;
+    margin:30px auto;
+    border-radius: 100px;
+}
+dd{
+    float: left;
+    height:100%;width: 70%;
+}
+dd h3 a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+dd h3 a:link{
+    text-decoration: none;
+    font-weight: bold;
+}
+dd h3 a:hover{
+    color: #f60;
+    text-decoration: none;
+}
+dd h3 a:active{
+    color: #f60;
+    text-decoration: none;
+}
+dd p{line-height: 10px;}
+span{line-height: 18px;}
+dd:last-child span:first-child{
+    font-weight: bold;
+}
+dd  h3+p span:last-child{
+    color: #999;
+}
+span a{color: #000;}
+span a:link{
+    text-decoration: none;
+}
+span a:hover{
+    color: #f60;
+    text-decoration: none;
+}
+span a:active{
+    color: #f60;
+    text-decoration: none;
+}
+#page{
+    margin: 0 auto;
+    width: 250px;
+}
+.pagination > li > a{
+    transition: 0.8s all;
+    -webkit-transition:0.8s all;
+    -moz-transition: 0.8s all;
+    -o-transition: 0.8s all;
+    -ms-transition: 0.8s all;
+}
+.pagination > li > a:hover,.pagination > li > a:focus{
+    background-color: #f60;
+    color: #000;
+}

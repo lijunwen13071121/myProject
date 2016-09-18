@@ -1,0 +1,77 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        title language-nav
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        style(type='text/css').
+            #teach{height: 100%;width: 100%;}
+            #teach div{margin: 0 auto;width: 90%;}
+            input{width: 50px;}
+            form:last-child button{
+                transition: 0.5s all;
+                -webkit-transition: 0.5s all;
+                -moz-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                -ms-transition: 0.5s all;
+            }
+            form:last-child button:hover{
+                background-color: #f60;
+                border: 1px solid #f60;
+            }
+            .form-control{width:150px;float:right;}
+    body
+        #teach
+            form
+                br
+                div
+                    label
+                        | 语言：
+                        button.btn.btn-default(type='button') 不限
+                        button.btn.btn-default(type='button') 法语
+                        button.btn.btn-default(type='button') 西语
+                        button.btn.btn-default(type='button') 葡语
+                        button.btn.btn-default(type='button') 德语
+                        button.btn.btn-default(type='button') 意语
+                        button.btn.btn-default(type='button') 拉丁语
+                        button.btn.btn-default(type='button') 俄语
+                        button.btn.btn-default(type='button') 日语
+                        button.btn.btn-default(type='button') 韩语
+                br
+                div
+                    label
+                        | 是否外教：
+                        input(type='radio', name='foreign')
+                        |  是
+                        input(type='radio', name='foreign')
+                        |  否
+                br
+                #city_5
+                    label.control-label(for='username')
+                        | 所在地：
+                        select#area5.dist.form-control
+                        select#city5.city.form-control
+                        select#prov5.prov.form-control
+                br
+                div
+                    label
+                        | 目标价位：
+                        input(type='text')
+                        |  --
+                        input(type='text')
+                        |  元
+                    button.btn.btn-default(type='button') 确定
+        script(src='/javascripts/jquery-3.1.0%20(2).js')
+        script(src='/javascripts/bootstrap.js')
+        script(src='/javascripts/city2.js')
+        script(src='/javascripts/citySelect2.js')
+        script.
+            var selectVa2 = new CitySelect({
+                data   : data,
+                provId : "#prov5",
+                cityId : '#city5',
+                areaId : '#area5',
+                isSelect: false
+            });
+

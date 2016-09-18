@@ -1,0 +1,109 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        title mainpage
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+        style.
+            #btn2{display: none;}
+    body
+        header#head
+            nav#nav1
+                #nav1-div1
+                    p
+                        a(href='http://m.xmgc360.com/start/web/account/') 注册 
+                        | |
+                        a(href='http://m.xmgc360.com/start/web/account/')  登录
+                #nav1-div2
+                    p
+                        a(href='my5') 消息
+                        a(href='my')  | 我的
+            //
+              <nav id="nav2">
+              <img src="55129.jpg" width="100%">
+              </nav>
+            nav#nav3.navbar.navbar-default.navbar-fixed-top
+                ul.nav.navbar-nav
+                    li  
+                    li
+                        .input-group
+                            input.form-control(type='text')
+                            span.input-group-btn
+                                button.btn.btn-default(type='button')
+                                    span.glyphicon.glyphicon-search  
+                    li
+                        a(href='#') 社区
+                    li
+                        a(href='#', onclick='language()') 小语种
+                    li
+                        a(href='#', onclick='teach()') 家教
+                    li  
+            nav#nav4.navbar.navbar-default.navbar-fixed-bottom
+                ul.nav.navbar-nav
+                    li
+                        a(href='#')  
+                    li
+                        a(href='#', onclick='teach()') 家教
+                    li
+                        a(href='#', onclick='language()') 小语种
+                    li
+                        a(href='#') 社区
+        #top
+        nav#nav5
+            form
+                br
+                .input-group
+                    input.form-control(type='text')
+                    span.input-group-btn
+                        button.btn.btn-default(type='button')
+                            span.glyphicon.glyphicon-search  
+                br
+                div
+                    button#btn1.btn.btn-default(type='button', onclick='form1()')
+                        span.glyphicon.glyphicon-chevron-down  
+                        | 筛选
+                    button#btn2.btn.btn-default(type='button', onclick='form2()')
+                        span.glyphicon.glyphicon-chevron-up  
+                        | 完成
+                    br
+                    iframe#hometeach-nav2(src='hometeach_navm', scrolling='no', name='hometeach-nav2')
+                br
+        #iframe
+            iframe#hometeach-nav1(src='hometeach_nav', scrolling='no', name='hometeach-nav1')
+            iframe#hometeach(src='hometeach', scrolling='no', name='hometeach')
+            iframe#aside(src='aside', scrolling='no')
+        a(href='#top')
+            button#bottom-top.btn.btn-default(type='button')
+                span.glyphicon.glyphicon-chevron-up  
+        script(src='/javascripts/jquery-3.1.0%20(2).js')
+        script(src='/javascripts/bootstrap.js')
+        script.
+            function teach(){
+                window.frames['hometeach'].document.location.href ='hometeach';
+                window.frames['hometeach-nav1'].document.location.href ='hometeach_nav';
+                window.frames['hometeach-nav2'].document.location.href ='hometeach_navm';
+            }
+            function language(){
+                window.frames['hometeach'].document.location.href ='language';
+                window.frames['hometeach-nav1'].document.location.href ='language_nav';
+                window.frames['hometeach-nav2'].document.location.href ='language_navm';
+            }
+            function form1(){
+                var hometeach = document.getElementById("hometeach-nav2");
+                var btn1 = document.getElementById("btn1");
+                var btn2 = document.getElementById("btn2");
+                hometeach.style.display="block";
+                btn1.style.display="none";
+                btn2.style.display="block";
+            }
+            function form2(){
+                var hometeach = document.getElementById("hometeach-nav2");
+                var btn1 = document.getElementById("btn1");
+                var btn2 = document.getElementById("btn2");
+                hometeach.style.display="none";
+                btn2.style.display="none";
+                btn1.style.display="block";
+            }
+            $('.collapse').collapse();

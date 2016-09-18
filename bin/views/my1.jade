@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1,target-densitydpi=high-dpi')
+        title 我的
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/my1.css')
+        style(type='text/css').
+            *{margin:0px;padding: 0px;}
+            @media (max-width:998px ) {
+                .right{font-size: 15px}
+                .msgL1,.msgR1{font-size:10px}
+                #ge{display:none}
+                #msg,#Tmsg{display: none}
+                #right1, #right2{
+                    display: inline-block;float: left;width:49%;border-radius:4px;
+                }
+                #right1{margin-right:2%}
+                body{margin:0px;padding:0px}
+            }
+            @media (min-width:998px ) {
+                .right{font-size: 20px}
+                .msgL1,.msgR1{font-size:12px}
+            }
+            #left2{display: none}
+    body.container
+        // <div style="width:80%;margin:auto;"></div>
+        .row
+            .col-lg-1.col-md-1.col-sm-1
+            #ge.col-xs-9.col-lg-9.col-md-9.col-sm-9(style='font-size:40px;font-weight: bolder;') 个人信息：
+        .row
+            .col-lg-1.col-md-1
+            #Lrow.col-lg-2.col-md-2.col-sm-12.col-xs-12(style='font-weight: bolder;')
+                .row
+                    #right1.right(style='margin-bottom:5px;') 基本信息
+                    #right2.right(style='margin-bottom:5px;') 教学信息
+            // 基本信息
+            .col-xs-12.col-lg-8.col-md-8.col-sm-12(style='font-size:16px')
+                #left1.left
+                    #msg.msg 基本信息：
+                    #msg1.msg
+                        #msg11.msg
+                            .row.msgRow
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-6.msgL1 姓名：
+                                .col-sm-8.col-lg-4.col-md-4.col-xs-6.msgR1 小李子
+                            .row.msgRow
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-6.msgL1 学生评分：
+                                .col-sm-8.col-lg-8.col-md-8.col-xs-6.msgR1 4.5
+                            .row.msgRow
+                                .col-sm-4.col-lg-4.col-md-4.col-xs-6.msgL1 自我介绍：
+                                .col-sm-8.col-lg-8.col-md-8.col-xs-6.msgR1 我是一个很帅气的老师，然后。。。。。。此后省略n字
+                            button.btn(style='background-color:#dedfe5') 编辑个人资料
+                        #msg12.msg
+                            img.img-responsive.img-circle(src='/images/head1.jpg')
+                // 教学信息
+                #left2.left
+                    #Tmsg.msg 授课信息：
+                    #Tmsg1.msg
+                        #Tmsg11.msg
+                            .row.msgRow
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 授课方向：
+                                .col-sm-8.col-lg-4.col-md-4.col-xs-8.msgR1 物理
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 授课人群：
+                                .col-sm-8.col-lg-4.col-md-4.col-xs-8.msgR1 高中生
+                            .row.msgRow
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 授课方式：
+                                .col-sm-8.col-lg-4.col-md-4.col-xs-8.msgR1 上门
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 理想价位：
+                                .col-sm-8.col-lg-4.col-md-4.col-xs-8.msgR1 100(元/每小时)
+                            .row.msgRow
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 授课时间：
+                                .col-sm-8.col-lg-10.col-md-10.col-xs-8.msgR1 周末
+                            .row.msgRow
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 授课范围：
+                                .col-sm-8.col-lg-10.col-md-10.col-xs-8.msgR1 江苏省苏州市
+                            .row.msgRow
+                                .col-sm-4.col-lg-2.col-md-2.col-xs-4.msgL1 授课时长：
+                                .col-sm-8.col-lg-10.col-md-10.col-xs-8.msgR1 2-3小时
+                // 资历
+        script(src='/javascripts/jquery-3.1.0%20(2).js')
+        script(src='/javascripts/bootstrap.js')
+        script(src='/javascripts/Tmy.js')

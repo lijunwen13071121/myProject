@@ -1,0 +1,19 @@
+#msg,#Tmsg,#Zmsg{background-color:#efefef;font-weight: bold;width:100%;height:50px;line-height:50px;
+border:1px solid #dadfe5;font-size:20px;}
+.right{width:80%;height:50px;background-color: orange;color: white;line-height: 50px;text-align: center;}
+.msgRow{line-height:50px;font-size:20px;}
+.msgL1{text-align: right;font-size:20px;}
+.msgR1{text-align: left;font-size:20px;}
+/*基本信息*/
+#msg1{width:100%;position: relative}
+#msg11{width:70%;height:50px;float: left}
+#msg12{width:30%;float: left}
+/*基本信息*/
+/*授课信息*/
+#Tmsg1{width:100%}
+#Tmsg11{width:90%;}
+/*授课信息*/
+/*资历*/
+#Zmsg1{width:100%}
+#Zmsg11{width:90%;}
+/*资历*/

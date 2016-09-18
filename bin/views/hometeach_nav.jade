@@ -1,0 +1,76 @@
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        title hometeach-nav
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        style(type='text/css').
+            #teach{height: 100%;width: 100%;}
+            #teach div{margin: 0 auto;width: 90%;}
+            input{width: 50px;}
+            form:last-child button{
+                transition: 0.5s all;
+                -webkit-transition: 0.5s all;
+                -moz-transition: 0.5s all;
+                -o-transition: 0.5s all;
+                -ms-transition: 0.5s all;
+            }
+            form:last-child button:hover{
+                background-color: #f60;
+                border: 1px solid #f60;
+            }
+            .form-control{width:150px;float:right;}
+    body
+        #teach
+            form
+                br
+                div
+                    label
+                        | 学龄：
+                        button.btn.btn-default(type='button') 不限
+                        button.btn.btn-default(type='button') 小学
+                        button.btn.btn-default(type='button') 初中
+                        button.btn.btn-default(type='button') 高中
+                        button.btn.btn-default(type='button') 大学
+                div
+                    label
+                        | 科目：
+                        button.btn.btn-default(type='button') 不限
+                        button.btn.btn-default(type='button') 语文
+                        button.btn.btn-default(type='button') 数学
+                        button.btn.btn-default(type='button') 英语
+                        button.btn.btn-default(type='button') 物理
+                        button.btn.btn-default(type='button') 化学
+                        button.btn.btn-default(type='button') 生物
+                        button.btn.btn-default(type='button') 政治
+                        button.btn.btn-default(type='button') 历史
+                        button.btn.btn-default(type='button') 地理
+                br
+                #city_5
+                    label.control-label(for='username')
+                        | 所在地：
+                        select#area5.dist.form-control
+                        select#city5.city.form-control
+                        select#prov5.prov.form-control
+                br
+                div
+                    label
+                        | 目标价位：
+                        input(type='text')
+                        |  --
+                        input(type='text')
+                        |  元
+                    button.btn.btn-default(type='button') 确定
+        script(src='/javascripts/jquery-3.1.0%20(2).js')
+        script(src='/javascripts/bootstrap.js')
+        script(src='/javascripts/city2.js')
+        script(src='/javascripts/citySelect2.js')
+        script.
+            var selectVa2 = new CitySelect({
+                data   : data,
+                provId : "#prov5",
+                cityId : '#city5',
+                areaId : '#area5',
+                isSelect: false
+            });

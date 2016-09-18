@@ -1,0 +1,159 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1,target-densitydpi=high-dpi')
+        title 我的
+        link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/my1.css')
+        style(type='text/css').
+            *{margin:0px;padding: 0px;}
+            @media (max-width:998px ) {
+                #Lrow{position: fixed;bottom:0px;}
+                .right{font-size: 15px;}
+                .msgL1{font-size:10px}
+                #ge{display:none}
+                #right1, #right2,#right3,#right4{
+                    display: inline-block;float: left;width:25%;border-radius:4px;margin-bottom:0px;
+                }
+                body{margin:0px;padding:0px}
+                #msg11 h3{font-size:14px;}
+                #header0{display: none}
+                body{padding-top:0px;padding-bottom:34px;}
+                #btn{display: block;}
+            }
+            @media (min-width:998px ) {
+                .right{font-size: 20px;margin-bottom:5px}
+                .msgL1,.msgR1{font-size:12px}
+                body{padding-top:15px}
+                #btn{display: none}
+            }
+            #left2,#left3,#left4{display: none}
+            #header0{position: fixed;top:0px; width:85%;height:20px;}
+            #header1{float:left}
+            #header2{float:right}
+            a{text-decoration:none;color:black}
+            a:active{color:orange}
+            a:link{text-decoration: none}
+            #ge a{font-size:40px;font-weight: bolder;color:orange;}
+            #ge a:hover{text-decoration:none}
+            #ge a:active{text-decoration:none;color:orange}
+            #ge a:visited{text-decoration: none}
+            #ge a:link{text-decoration:none}
+    body.container
+        #header0
+            #header(style='width:100%;height:15px;font-size:10px;')
+                #header1
+                    a(href='http://m.xmgc360.com/start/web/account/') 注册
+                    |  /
+                    a(href='http://m.xmgc360.com/start/web/account/') 登录
+                #header2
+                    a(href='') 消息
+                    |  /
+                    a(href='#') 首页
+            div(style='clear:both')
+        // <div style="width:80%;margin:auto;"></div>
+        .row
+            #ge.col-xs-12.col-lg-12.col-md-12.col-sm-12
+                a(href='#') 首页
+        .row
+            .col-lg-1.col-md-1
+            #Lrow.col-lg-2.col-md-2.col-sm-12.col-xs-12(style='font-weight: bolder;')
+                .row
+                    #right1.right 好老师
+                    #right2.right 课程申请
+                    #right3.right 课程评分
+                    #right4.right 消息
+            // 基本信息
+            .col-xs-12.col-lg-8.col-md-8.col-sm-12(style='font-size:16px')
+                #left1.left
+                    #msg1.msg
+                        div
+                            .row.msgRow
+                                .col-sm-6.col-lg-4.col-md-4.col-xs-12.msgL1
+                                    a(href='#')
+                                        img.img-circle(src='/images/head1.jpg', style='width:50px;height:50px;margin:auto;float: left')
+                                    div(style='float: left')
+                                        h4 小李子
+                                        h6(style='font-size:10px') 物理
+                                    button.btn(style='float:left;font-size:6px;margin-top:20px;margin-left:20px;;padding:2px;') 取消关注
+                        br
+                        br
+                        button.btn(style='font-size:14px;')
+                            a(href='tech-account') 申请成为老师
+                // 课程申请
+                #left2.left
+                    #Tmsg1.msg
+                        #Tmsg11.msg(style='width:100%')
+                            table#table1.table
+                                tr
+                                    th.th1 老师名
+                                    th.th2 课程名
+                                    th.th4(style='width:20%') 取消
+                                tr
+                                    td.td1 韦小宝
+                                    td.td2 化学
+                                    td.td1
+                                        button.btn.btn-primary.btn-sm(type='button') 取消
+                // 课程评分
+                #left3.left
+                    #Zmsg1.msg
+                        #Zmsg11.msg
+                            table#table3.table
+                                tr
+                                    th.th1 老师名
+                                    th.th2 课程名
+                                    th.th3 评分
+                                    th.th4 确认
+                                tr
+                                    td.td1 王小二
+                                    td.td2 数学
+                                    td.td3
+                                        form
+                                            select.select
+                                                option(value='1') 1
+                                                option(value='2') 2
+                                                option(value='3') 3
+                                                option(value='4') 4
+                                                option(value='5', selected='selected') 5
+                                    td.td4
+                                        button.btn 确认
+                #left4.left
+                    #Xmsg1.msg
+                        #Xmsg11.msg
+                            div(style='width:80%;margin-left:10%;margin-top:10px;margin-bottom:10px;')
+                                div 9.9.21:54
+                                div(style='font-size:20px;border-radius:4px;border:1px solid silver;')
+                                    span 小李子的联系方式为：1516441603
+                                button.btn 删除
+        button#btn.btn(style='position:fixed;bottom:100px;background-color:rgba(0,0,0,0.1)') 首页
+        script(src='javascripts/jquery-3.1.0%20(2).js')
+        script(src='javascripts/bootstrap.js')
+        script.
+            $(function(){
+                $('#right1').click(function(){
+                    $('.left').css("display","none");
+                    $('#left1').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right1').css({color:"orange",backgroundColor:"white"})
+                });
+                $('#right2').click(function(){
+                    $('.left').css("display","none");
+                    $('#left2').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right2').css({color:"orange",backgroundColor:"white"})
+                });
+                $('#right3').click(function(){
+                    $('.left').css("display","none");
+                    $('#left3').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right3').css({color:"orange",backgroundColor:"white"});
+                });
+                $('#right4').click(function(){
+                    $('.left').css("display","none");
+                    $('#left4').show();
+                    $('.right').css({color:"white",backgroundColor:"orange"});
+                    $('#right4').css({color:"orange",backgroundColor:"white"});
+                });
+            })

@@ -1,0 +1,175 @@
+*{margin: 0;padding: 0;}
+#nav1{
+    width: 100%;height: 30px;
+    background-color:#333;
+    position: fixed;top:0;
+    z-index: 1;
+}
+#nav1-div1{
+    float: left;
+    width: 80px;height: 30px;
+    margin-left: 50px;
+}
+#nav1-div2{
+    float: right;
+    width: 82px;height: 30px;
+    margin-right: 50px;
+}
+#nav1-div1 p{
+    line-height: 30px;
+    font-weight: bold;
+    color:#aaa;
+}
+#nav1-div2 p{
+    line-height: 30px;
+    font-weight: bold;
+}
+#nav1-div1 p a{
+    color: #ddd;
+    transition: 0.5s color;
+    -webkit-transition:0.5s color;
+    -moz-transition: 0.5s color;
+    -o-transition: 0.5s color;
+    -ms-transition: 0.5s color;
+    text-decoration: none;
+}
+#nav1-div2 p a{
+    color: #ddd;
+    transition:0.5s color;
+    -webkit-transition:0.5s color;
+    -moz-transition: 0.5s color;
+    -o-transition: 0.5s color;
+    -ms-transition: 0.5s color;
+    text-decoration: none;
+}
+#nav1-div1 p a:hover{color: #f60}
+#nav1-div2 p a:hover{color: #f60}
+.navbar-default{
+    background-color: #f60;
+    border:0;}
+.navbar-nav > li > a {
+    font-size: large;
+    font-weight: bold;}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+#nav2{
+    width:100%; height:135px;
+    overflow: hidden;
+}
+#nav3{
+    border: 0;
+    margin-top:30px;
+    position: fixed;
+    height: 50px;
+}
+#nav3 ul{width: 100%;}
+#nav3 ul li{width:15%;float: right;}
+#nav3 ul li:nth-child(2){
+    width:45%;height:36px;
+    margin-top:8px;
+    float: right;
+}
+#nav3 ul li div{width:60%;float: right;}
+#nav3 ul li div button{width: 40px;}
+#nav3 ul li div button:hover{color: #f60;background-color: #fff;}
+#nav3 ul li div button:focus{color: #f60;background-color: #fff;}
+#nav3 ul li:first-child,#nav3 ul li:last-child{width: 5%;}
+#nav4{
+    border: 0;
+    margin-bottom:0;
+    position: fixed;
+    width: 100%
+}
+#nav4 ul{width: 100%}
+#nav4 ul li{float: left;}
+#nav4 ul li a{text-align: center;}
+#nav4 ul li{width: 33.3%;}
+form{margin: auto;width: 80%;}
+.input-group-btn button{width: 40px;}
+.input-group-btn button:hover{color: #f60;background-color: #fff;}
+.input-group-btn button:focus{color: #f60;background-color: #fff;}
+#btn1{
+    transition: 0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+#btn2{
+    transition: 0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+#btn1:hover{background-color: #f60;border:1px solid #f60;}
+#btn2:hover{background-color: #f60;border:1px solid #f60;}
+#bottom-top{
+    border: 1px solid #f60;
+    position:fixed;right:30px;top: 500px;
+    height: 40px;width: 40px;
+    color:#f60;
+}
+#bottom-top:hover{
+    border:1px solid #f60;
+    background-color: #f60;
+    color:#fff;
+}
+.btn:hover{background-color: #fff;}
+#top{height: 80px;}
+#iframe{
+    margin: auto;
+    width:1000px;height: 1300px;
+    position: relative;
+}
+#hometeach-nav1{
+    width: 75% ;height: 220px;
+    border:0;
+    float: left;
+}
+#hometeach-nav2{
+    width: 75% ;height:380px;
+    border:0;
+    float: left;
+}
+#hometeach{
+    width: 75%;height: 1080px;
+    border:0;
+    float: left;
+}
+#aside{
+    position:absolute;top:0;right: 0;
+    width: 25%;height: 600px;
+    border:0;
+}
+@media screen and (min-width:1024px){
+    #nav3{display:block;}
+    #nav4{display:none;}
+    #nav5{display:none;}
+    #hometeach-nav1{display:block;}
+    #hometeach-nav2{display:none;}
+}
+@media screen and (max-width:1024px){
+    #nav3{display:block;}
+    #nav4{display:none;}
+    #nav5{display:none;}
+    #hometeach-nav1{display:block;}
+    #hometeach-nav2{display:none;}
+    #aside{display: none;}
+    #hometeach,#hometeach-nav1,#hometeach-nav2{ width:100%;}
+    #iframe{width:800px;}
+}
+@media screen and (max-width:824px){
+    #nav3{display:none;}
+    #nav5{display:block;}
+    #hometeach-nav1{display:none;}
+    #hometeach-nav2{margin: auto;width: 80%;float: none;}
+    #nav4{display: block;width: 100%;}
+    #top{height: 30px;}
+    #nav4 li:first-child{display:none;}
+    #iframe{ width:100%; }
+}
+
+
+
